@@ -1,0 +1,13 @@
+<Project>
+	<PropertyGroup>
+		<Copyright>Copyright © Chris Wood 2024</Copyright>
+		<Company>Tailed</Company>
+		<Authors>Chris Wood</Authors>
+		<PackageIcon>tailed.png</PackageIcon>
+		<Version>1.0.0</Version>
+		<RepositoryUrl>https://github.com/TailedApp/dotnet-lib</RepositoryUrl>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageTags>logs;tail;</PackageTags>
+		<PackageProjectUrl>ttps://github.com/TailedApp/</PackageProjectUrl>
+	</PropertyGroup>
+</Project>

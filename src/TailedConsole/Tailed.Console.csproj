@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>tailed.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +15,14 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\tailed.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <Link>tailed.png</Link>
+    </None>
   </ItemGroup>
 
 </Project>
