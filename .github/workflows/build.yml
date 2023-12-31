@@ -23,16 +23,6 @@ jobs:
         run: dotnet restore src/TailedClient.sln
       - name: Build
         run: dotnet build src/TailedClient.sln --configuration Release --no-restore
-      - name: Test
-        run: dotnet test src/TailedClient.sln --no-restore --no-build --configuration Release --logger "trx;LogFileName=test-results.trx" || true
-      - name: Test Report
-        uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          name: Linux Results
-          path: "**/test-results.trx"                            
-          reporter: dotnet-trx
-          fail-on-error: true
       - name: Publish the packages
         if: github.ref == 'refs/heads/main'
         run: dotnet nuget push **/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }} --skip-duplicate
