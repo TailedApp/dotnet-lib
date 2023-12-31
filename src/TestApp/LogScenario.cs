@@ -23,10 +23,10 @@ internal static class LogScenario
 
         logger.LogInformation("Started The Test".Pastel(ConsoleColor.Red).PastelBg(ConsoleColor.Yellow));
 
-        for (var i = 0; i < 50; i++)
+        for (var i = 0; i < 50000; i++)
         {
             logger.Log(TestData.GetRandomLogLevel(), TestData.GetRandomSentence());
-            await Task.Delay(500);
+            await Task.Delay(100);
 
         }
     }
