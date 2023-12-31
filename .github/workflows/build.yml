@@ -20,11 +20,11 @@ jobs:
         with:
           dotnet-version: '8.x'
       - name: Install dependencies
-        run: dotnet restore src/Datalite.sln
+        run: dotnet restore src/TailedClient.sln
       - name: Build
-        run: dotnet build src/Datalite.sln --configuration Release --no-restore
+        run: dotnet build src/TailedClient.sln --configuration Release --no-restore
       - name: Test
-        run: dotnet test src/Datalite.sln --no-restore --no-build --configuration Release --logger "trx;LogFileName=test-results.trx" || true
+        run: dotnet test src/TailedClient.sln --no-restore --no-build --configuration Release --logger "trx;LogFileName=test-results.trx" || true
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: always()
